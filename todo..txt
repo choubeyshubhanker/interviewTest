@@ -1,0 +1,21 @@
+create a react js app  
+app will have a form to register a person's contact with multiple contact details
+
+form will have fields
+
+1. Title [Text box, optional]
+2. First Name [Text box, mandatory]
+3. Last Name [Text box, optional]
+
+ 
+
+4. Contacts 
+    4.1 Type [dropdown with options => 1.Mobile No., 2.Phone No., 3. Email Id , mandatory]
+    4.2 Contact Value [text box, mandatory]
+
+ 
+
+=> contacts section will have a add button to add new contact and for existing contact a remove button will be there to remove the existing contact
+=> the contact detail value should have validation for mobile number, phone number or for email id on the basis of selected type
+
+ 
