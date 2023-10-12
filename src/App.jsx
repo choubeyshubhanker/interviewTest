@@ -207,24 +207,11 @@ function App() {
               
               <TableHead>
                 <TableRow>
-                  
+                <TableCell align="right">Action</TableCell>
                   <TableCell>Title</TableCell>
                   <TableCell align="right">First Name</TableCell>
                   <TableCell align="right">Last Name</TableCell>
-                  {contactsData.map((type, id) => {
-                    return (
-                      <>
-                        {type.contactType.map((item, id) => {
-                          return (
-                            <TableCell key={id} align="right">
-                              {item.contactType}
-                            </TableCell>
-                          );
-                        })}
-                      </>
-                    );
-                  })}
-                  <TableCell align="right">Action</TableCell>
+                  <TableCell align="right">Contact Details</TableCell>
                 </TableRow>
               </TableHead>
 
@@ -235,6 +222,9 @@ function App() {
                     key={id}
                     sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
                   >
+                     <TableCell align="right">
+                      <DeleteForeverIcon onClick={() => deleteContact(id)} />
+                    </TableCell>
                     <TableCell component="th" scope="row">
                       {row.values.title}
                     </TableCell>
@@ -249,9 +239,7 @@ function App() {
                       );
                     })}
 
-                    <TableCell align="right">
-                      <DeleteForeverIcon onClick={() => deleteContact(id)} />
-                    </TableCell>
+                   
                   </TableRow>
                 ))}
               </TableBody>
